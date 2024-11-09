@@ -1,0 +1,14 @@
+body{
+    background: rgb(49,184,238);
+    background: radial-gradient(circle, rgba(49,184,238,1) 0%, rgba(37,141,234,1) 25%, rgba(27,102,230,1) 75%, rgba(6,23,223,1) 100%); 
+    color: white;
+    text-align: center;
+}
+
+.sun{
+    position: absolute;
+    top: 0px;
+    left: 25%;
+    width: 50%;
+    z-index: -1;
+}
