@@ -7,8 +7,8 @@ body{
 
 .sun{
     position: absolute;
-    top: 50vh;
-    left: 25%;
+    top: -50%;
+    left: -30%;
     width: 50%;
     z-index: -1;
 }
