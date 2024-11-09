@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="code.js" defer></script>
-</head>
-<body>
-    <form action="" id="cityForm">
-        <input type="text" id="citySearch" placeholder="City">
-        <button type="submit" id="search">Search</button>
-    </form>
-    <h1>What's the weather like?</h1>
-    <h2 id="cityName"></h2>
-    <h3 id="temp">Temperature: </h3>
-    <h3 id="conditions">Conditions: </h3>
-    <label for="measurement">Fahrenheit or celsius</label>
-    <button type="checkbox" id="measurement" onclick="changeUnit()">A</button>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="code.js" defer></script>
+	</head>
+	<body>
+		<h1>What's the weather like?</h1>
+		<form action="" id="cityForm">
+			<input type="text" id="citySearch" placeholder="Where are you located?" />
+			<button type="submit" id="search">Search</button>
+		</form>
+		<h2 id="cityName"></h2>
+        <div>
+            <h3 id="temp">Temperature:</h3>
+            <h3 id="conditions">Conditions:</h3>
+        </div>
+		<label for="measurement">Fahrenheit or celsius</label>
+		<button type="checkbox" id="measurement" onclick="changeUnit()">A</button>
+        <div>
+            <img class="sun" src="https://www.onlygfx.com/wp-content/uploads/2018/09/4-clipart-sun-1.png" alt="">
+        </div>
+	</body>
 </html>
