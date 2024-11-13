@@ -33,7 +33,7 @@ function changeUnit() {
 function clearData() {
 	cityName.textContent = "";
 	temp.textContent = "Temperature: ";
-	conditions.textContent = "Conditions: ";
+    conditions.textContent = "Conditions: ";
 }
 
 function convert(fahrenheit) {
@@ -46,14 +46,14 @@ async function getData() {
 		`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${citySearch}?key=73XF5R5ES98BM9EGGE5AUGQLK`,
 		{ mode: "cors" }
 	);
-	const weatherData = await response.json();
+	const weatherInformation = await response.json();
 	const weatherObject = createObject(
-		weatherData.address,
-		weatherData.days[0].tempmin,
-		weatherData.days[0].tempmax,
-		weatherData.days[0].temp,
-		weatherData.days[0].feelslike,
-		weatherData.days[0].conditions
+		weatherInformation.address,
+		weatherInformation.days[0].tempmin,
+		weatherInformation.days[0].tempmax,
+		weatherInformation.days[0].temp,
+		weatherInformation.days[0].feelslike,
+		weatherInformation.days[0].conditions
 	);
 	console.log(weatherObject);
 	return weatherObject;

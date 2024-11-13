@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<h1>What's the weather like?</h1>
-		<form action="" id="cityForm">
+		<form action="" id="cityForm" class="search">
 			<input type="text" id="citySearch" placeholder="Where are you located?" />
 			<button type="submit" id="search">Search</button>
 		</form>
@@ -17,11 +17,14 @@
         <div>
             <h3 id="temp">Temperature:</h3>
             <h3 id="conditions">Conditions:</h3>
-        </div>
-		<label for="measurement">Fahrenheit or celsius</label>
-		<button type="checkbox" id="measurement" onclick="changeUnit()">A</button>
-        <div>
             <img class="sun" src="https://www.onlygfx.com/wp-content/uploads/2018/09/4-clipart-sun-1.png" alt="">
         </div>
+        <label class="switch">
+            <!-- <label for="unit">Show in F°?</label> -->
+            <div class="sliderDiv">
+                 <input id="unit" type="checkbox" onclick="changeUnit()">
+                 <span class="slider round"></span>
+             </div>
+        </label>
 	</body>
 </html>

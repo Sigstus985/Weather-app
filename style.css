@@ -1,14 +1,111 @@
-body{
-    background: rgb(49,184,238);
-    background: radial-gradient(circle, rgba(49,184,238,1) 0%, rgba(37,141,234,1) 25%, rgba(27,102,230,1) 75%, rgba(6,23,223,1) 100%); 
-    color: white;
-    text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap");
+
+:root {
+	--yelllow: #ffcc00;
+	--blue: rgba(6, 23, 223, 1);
 }
 
-.sun{
-    position: absolute;
-    top: -50%;
-    left: -30%;
-    width: 50%;
-    z-index: -1;
+body {
+	background: rgb(49, 184, 238);
+	background: radial-gradient(
+		circle,
+		rgba(49, 184, 238, 1) 0%,
+		rgba(37, 141, 234, 1) 25%,
+		rgba(27, 102, 230, 1) 75%,
+		rgba(6, 23, 223, 1) 100%
+	);
+	color: white;
+	text-align: center;
+	font-family: "Sour Gummy", sans-serif;
+}
+
+h2 {
+	color: var(--blue);
+	font-size: 3rem;
+}
+
+.sun {
+	position: absolute;
+	top: min(25%, 100px);
+	left: 25%;
+	width: 50%;
+	z-index: -1;
+	transform: skew(-10deg);
+	transition-duration: 2s;
+}
+
+.sun:hover {
+	transition-duration: 2s;
+	transform: skew(50deg);
+}
+
+.search {
+	input {
+		border-radius: 10px;
+		border-style: none;
+		padding-block: 5px;
+		padding-left: 5px;
+	}
+
+	button {
+		border-style: none;
+		padding-block: 5px;
+		padding-inline: 10px;
+		border-radius: 10px;
+		font-weight: 700;
+	}
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
 }
